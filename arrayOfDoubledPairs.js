@@ -37,7 +37,4 @@ var canReorderDoubled = function (arr) {
   return arr.length ? false : true;
 };
 
-console.log(canReorderDoubled([3, 1, 3, 6]));
-console.log(canReorderDoubled([2, 1, 2, 6]));
-console.log(canReorderDoubled([4, -2, 2, -4]));
-console.log(canReorderDoubled([1, 2, 4, 16, 8, 4]));
+module.exports = canReorderDoubled;
