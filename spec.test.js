@@ -1,4 +1,5 @@
 const canReorderDoubled = require("./arrayOfDoubledPairs");
+const stringSubsequence = require("./stringSubsequence");
 
 describe("Array of Doubled Pairs", () => {
   test("Validity Checks", () => {
@@ -8,4 +9,8 @@ describe("Array of Doubled Pairs", () => {
     expect(canReorderDoubled([1, 2, 4, 16, 8, 4])).toBe(false);
     expect(canReorderDoubled([0, 0])).toBe(true);
   });
+});
+
+describe("SubSequence", () => {
+  test("Validity CHecks", () => {});
 });
