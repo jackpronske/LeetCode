@@ -1,5 +1,5 @@
 const canReorderDoubled = require("./arrayOfDoubledPairs");
-const stringSubsequence = require("./stringSubsequence");
+const { subsequence, longestSubSequence } = require("./stringSubsequence");
 
 describe("Array of Doubled Pairs", () => {
   test("Validity Checks", () => {
@@ -12,5 +12,13 @@ describe("Array of Doubled Pairs", () => {
 });
 
 describe("SubSequence", () => {
-  test("Validity CHecks", () => {});
+  test("Validity Checks", () => {
+    expect(subsequence("abc", "adbsc")).toBe(true);
+    expect(subsequence("abcc", "adbcsc")).toBe(true);
+    expect(subsequence("abcc", "adbsc")).toBe(false);
+
+    expect(longestSubSequence(["de", "a", "ab", "abc", "e", "abc"])).toBe(2);
+    expect(longestSubSequence(["aba", "cdc", "eae"])).toBe(3);
+    expect(longestSubSequence(["aaa", "aa", "a"])).toBe(-1);
+  });
 });
