@@ -6,12 +6,14 @@ const shift = (letter, amount) => {
 };
 
 const shiftingLetters = function (s, shifts) {
-  for (let i = 0; i < shifts.length; i++) {
-    for (let j = 0; j < i + 1; j++) {
-      let newletter = shift(s[j], shifts[i]);
-      s = s.substring(0, j) + newletter + s.substring(j + 1);
-    }
+  for (let i = shifts.length - 2; i >= 0; i--) {
+    shifts[i] = shifts[i] + shifts[i + 1];
   }
+  for (let j = 0; j < s.length; j++) {
+    let newletter = shift(s[j], shifts[j]);
+    s = s.substring(0, j) + newletter + s.substring(j + 1);
+  }
+
   return s;
 };
 

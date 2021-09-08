@@ -1,6 +1,7 @@
 const canReorderDoubled = require("./arrayOfDoubledPairs");
 const { shiftingLetters, shift } = require("./shiftingLetters");
 const { subsequence, longestSubSequence } = require("./stringSubsequence");
+const { ListNode, addTwoNumbers } = require("./addTwoNumbers");
 
 describe("Array of Doubled Pairs", () => {
   test("Validity Checks", () => {
@@ -31,5 +32,23 @@ describe("Shifting Letters", () => {
 
     expect(shiftingLetters("aaa", [1, 2, 3])).toBe("gfd");
     expect(shiftingLetters("abc", [3, 5, 9])).toBe("rpl");
+  });
+});
+
+describe("Add Two Numbers", () => {
+  test("Validity Checks", () => {
+    let testNode1 = new ListNode(1);
+    let testNode2 = new ListNode(2);
+    let testNode3 = new ListNode(3);
+    testNode1.next = testNode2;
+    testNode2.next = testNode3;
+
+    let testNode4 = new ListNode(4);
+    let testNode5 = new ListNode(5);
+    let testNode6 = new ListNode(6);
+    testNode4.next = testNode5;
+    testNode5.next = testNode6;
+
+    expect(addTwoNumbers(testNode1, testNode4).value).toBe(5);
   });
 });
