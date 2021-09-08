@@ -1,5 +1,5 @@
 const canReorderDoubled = require("./arrayOfDoubledPairs");
-const { shiftingLetters } = require("./shiftingLetters");
+const { shiftingLetters, shift } = require("./shiftingLetters");
 const { subsequence, longestSubSequence } = require("./stringSubsequence");
 
 describe("Array of Doubled Pairs", () => {
@@ -26,6 +26,9 @@ describe("SubSequence", () => {
 
 describe("Shifting Letters", () => {
   test("Validity Checks", () => {
+    expect(shift("a", 1)).toBe("b");
+    expect(shift("a", 27)).toBe("b");
+
     expect(shiftingLetters("aaa", [1, 2, 3])).toBe("gfd");
     expect(shiftingLetters("abc", [3, 5, 9])).toBe("rpl");
   });
