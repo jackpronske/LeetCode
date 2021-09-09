@@ -37,7 +37,6 @@ var addTwoNumbers = function (l1, l2) {
   if (extraDigit === 1) {
     current3.next = new ListNode(1);
   }
-  console.log(l3.next.value);
   return l3;
 };
 
