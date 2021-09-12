@@ -22,4 +22,4 @@ const longestPalSub = (inputString) => {
   return result;
 }
 
-console.log(longestPalSub('ababdd'));
+module.exports = longestPalSub;

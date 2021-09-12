@@ -3,6 +3,7 @@ const { shiftingLetters, shift } = require("./shiftingLetters");
 const { subsequence, longestSubSequence } = require("./stringSubsequence");
 const { ListNode, addTwoNumbers } = require("./addTwoNumbers");
 const { longestString } = require("./longestSubWORepeatingChars");
+const  longestPalSub  = require('./longestPalindromicSubsequence')
 
 describe("Array of Doubled Pairs", () => {
   test("Validity Checks", () => {
@@ -65,3 +66,10 @@ describe("Longest SubString Without Repeating Characters", () => {
     expect(longestString("")).toBe(0);
   });
 });
+
+describe('Longest Palindromic Subsequence', () => {
+  test('Validity Checks', () => {
+    expect(longestPalSub('ababdd')).toBe('aba');
+    expect(longestPalSub('fdfsdfsfracecarasdkjdfkjs')).toBe('racecar');
+  })
+})
