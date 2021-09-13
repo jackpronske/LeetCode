@@ -3,7 +3,8 @@ const { shiftingLetters, shift } = require("./shiftingLetters");
 const { subsequence, longestSubSequence } = require("./stringSubsequence");
 const { ListNode, addTwoNumbers } = require("./addTwoNumbers");
 const { longestString } = require("./longestSubWORepeatingChars");
-const  longestPalSub  = require('./longestPalindromicSubsequence')
+const  longestPalSub  = require('./longestPalindromicSubsequence');
+const { findPrime } = require('./IBM')
 
 describe("Array of Doubled Pairs", () => {
   test("Validity Checks", () => {
@@ -71,5 +72,13 @@ describe('Longest Palindromic Subsequence', () => {
   test('Validity Checks', () => {
     expect(longestPalSub('ababdd')).toBe('aba');
     expect(longestPalSub('fdfsdfsfracecarasdkjdfkjs')).toBe('racecar');
+  })
+})
+
+describe('Find Nth Prime Number', () => {
+  test('Validity Checks', () => {
+    expect(findPrime(6)).toBe(13);
+    expect(findPrime(17)).toBe(59);
+    expect(findPrime(10001)).toBe(104743);
   })
 })
