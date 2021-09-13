@@ -5,6 +5,7 @@ const { ListNode, addTwoNumbers } = require("./addTwoNumbers");
 const { longestString } = require("./longestSubWORepeatingChars");
 const  longestPalSub  = require('./longestPalindromicSubsequence');
 const { findPrime } = require('./findNthPrime')
+const { reverseInteger } = require('./reverse')
 
 describe("Array of Doubled Pairs", () => {
   test("Validity Checks", () => {
