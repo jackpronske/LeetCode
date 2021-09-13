@@ -4,7 +4,7 @@ const { subsequence, longestSubSequence } = require("./stringSubsequence");
 const { ListNode, addTwoNumbers } = require("./addTwoNumbers");
 const { longestString } = require("./longestSubWORepeatingChars");
 const  longestPalSub  = require('./longestPalindromicSubsequence');
-const { findPrime } = require('./IBM')
+const { findPrime } = require('./findNthPrime')
 
 describe("Array of Doubled Pairs", () => {
   test("Validity Checks", () => {
