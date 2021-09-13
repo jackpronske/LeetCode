@@ -83,3 +83,11 @@ describe('Find Nth Prime Number', () => {
     expect(findPrime(10001)).toBe(104743);
   })
 })
+
+describe('Reverse Integer without Converting to String', () => {
+  test('Validity Checks', () => {
+    expect(reverseInteger(100)).toBe(1)
+    expect(reverseInteger(326)).toBe(623)
+    expect(reverseInteger(-3267)).toBe(-7623)
+  })
+})
