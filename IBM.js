@@ -11,7 +11,7 @@ const findPrime = (targetIndex) => {
   //generate a list of all prime numbers until the new list.length (OBO) is equal to our target index 
   let result = [2,3,5,7,11,13];
   let start = 13;
-  while (result.length < targetIndex + 1) {
+  while (result.length <= targetIndex) {
     start++;
     let isPrime = true;
     //check to see if this new start is a prime number, if so, we'll add it to the result array
