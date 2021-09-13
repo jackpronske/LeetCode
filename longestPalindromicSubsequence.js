@@ -4,7 +4,7 @@ const longestPalSub = (inputString) => {
   let result = inputString[0];
   while (index < inputString.length) {
       if (inputString[index] === inputString[index + 1]) {
-          result = result.length === 1 ? inputString.substring(index, index + 1) : result;
+          result = result.length === 1 ? inputString.substring(index, index + 2) : result;
           left = index - 1;
           right = index + 2;
       } else {
